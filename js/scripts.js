@@ -26,6 +26,6 @@ console.log(document.getElementById('header-title')) //searches for id header-ti
 var headerTitle = document.getElementById('header-title');
 console.log(headerTitle);
 // headerTitle.textContent= "Hello";
-document.getElementById("header-title").textContent= "yoyo"; //changes current html
+// document.getElementById("header-title").textContent= "yoyo"; //changes current html
 
 // headerTitle.style.borderBottom= "solid 3px #000"; //this is how you access or add css promperties

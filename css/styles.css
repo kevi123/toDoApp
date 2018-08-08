@@ -1,0 +1,18 @@
+.headerTitle{
+  font-size: 40px;
+}
+
+.subscript{
+  font-size: 20px;
+}
+
+.myTitles{
+  text-align: center;
+  text-wight: bold;
+  color: red;
+  text-shadow: 0px 0px 10px #000000;
+}
+
+.myCenter{
+  text-align: center;
+}
