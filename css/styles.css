@@ -1,6 +1,18 @@
 .headerTitle{
   font-size: 40px;
+  color: blue;
+  text-shadow: 0px 0px 5px #ff0000; /* hori vert size*/
 }
+
+.headerBackground{
+  background-color: lightblue;
+
+}
+
+.listBackground{
+  background-color: lightgrey;
+}
+
 
 .subscript{
   font-size: 20px;

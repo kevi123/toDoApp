@@ -9,7 +9,7 @@
   <title>To DO Web App</title>
 </head>
 <body>
-  <header id="main-header" class="bg-success text-white p-4 mb-3">
+  <header id="main-header" class=" headerBackground mb-3"> <!--mb-3 is margin bottom 3px-->
     <div class="container">
       <span id="header-title" class="headerTitle">Super Awesome To Do List Web App </span>
       <span class="subscript"> by Kevin Hinojosa</span>
@@ -23,7 +23,7 @@
           <h2 class="myTitles">Add to to do list</h2>
           <form class="myCenter">
           <input type="text" class="form-control">  <!--mr-6-->
-          <input type="submit" class="btn btn-dark" value="Submit">
+          <input id="myButton" type="submit" class="btn btn-success" value="Submit">
         </form>
         </div>
       </div>
@@ -31,10 +31,12 @@
   </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row listBackground">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h2 class="myTitles">Items</h2>
-          <ul id="items" class="list-group">
+          <h2 class="myTitles">Tasks</h2>
+          <input id="finishedButton" type="submit" class="btn btn-warning" value="Finished">
+
+          <ul id="items1" class="list-group">
             <li class="list-group-item">Item 1</li>
             <li class="list-group-item">Item 2</li>
             <li class="list-group-item">Item 3</li>
@@ -42,26 +44,27 @@
           </ul>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h2 class="myTitles">Items</h2>
+          <h2 class="myTitles">DONE!!</h2>
+          <input id="deleteButton" type="submit" class="btn btn-danger" value="Finished">
+
             <ul id="items" class="list-group">
-              <li class="list-group-item">Item 1</li>
-              <li class="list-group-item">Item 2</li>
-              <li class="list-group-item">Item 3</li>
-              <li class="list-group-item">Item 4</li>
+              <li id="done" class="list-group-item">Done 1</li>
+              <li id="done" class="list-group-item">Done 2</li>
+              <li id="done" class="list-group-item">Done 3</li>
+              <li id="done" class="list-group-item">Done 4</li>
             </ul>
         </div>
       </div>
+    </div>
 
+
+    <footer class="headerBackground">
+      <div>
+        <h1 class="myCenter"><a href="https://kevi123.github.io/">About the creator</a></h1>
+        <img class="myCenter" src="" alt="picture of me">
+      </div>
+    </footer>
+  </body>
 </html>
-
-
-<footer>
-  <div>
-    <h1>test button</h1>
-  </div>
-
-</footer>
-</body>
-
 <script src="js/scripts.js"></script>
 </html>
