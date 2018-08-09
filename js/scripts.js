@@ -34,28 +34,31 @@ document.getElementById("items").appendChild(node);
 */
 
 
-var counter=0;
-var tasks = items1.children;
+var taskCounter=0;
+var deleteCounter=0;
+var tasksList = items1.children;
 var userTask;
 var b;
 
-console.log(counter);
-document.getElementById("myButton").addEventListener("click", myFunction());
+console.log(taskCounter);
+document.getElementById("myButton").addEventListener("click", myFunction);
 console.log("passedEvent");
 
-function myFunction(){
+function myFunction(e){
+  e.preventDefault();   //we need this so page soes not refresh. forms request url yada yada
   userTask= prompt("Hello please add item to do list");
   //console.log(items1.children);
-  console.log(tasks);
-  tasks[counter].textContent = userTask;
+  console.log(tasksList);
+  tasksList[taskCounter].textContent = userTask;
    // var newNode= tasks[counter]
    // document.getElementById("items1").appendChild(newNode);
-   counter=counter+1;
+   taskCounter=taskCounter+1;
 };
 
-document.getElementById("finishedButton").addEventListener("click", finishedFunction());
+document.getElementById("finishedButton").addEventListener("click", finishedFunction);
 
-function finishedFunction(){
+function finishedFunction(e){
+  e.preventDefault();   //we need this so page soes not refresh. forms request url yada yada
   userTask= prompt("WHich task is finished? 1-4");
   //console.log(items1.children);
   console.log(tasks);
