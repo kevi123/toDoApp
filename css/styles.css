@@ -6,8 +6,17 @@
 
 .headerBackground{
   background-color: lightblue;
-
+  opacity: .8;
 }
+
+body{
+  opacity: 1;
+  background-image: url("../img/wallpaper.jpg");
+  /* background-repeat: no-repeat;*/
+  background-size: 100% 100%;  /*width height*/
+  background-color: #ffffff;
+}
+
 
 .listBackground{
   background-color: lightgrey;

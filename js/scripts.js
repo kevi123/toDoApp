@@ -35,9 +35,12 @@ document.getElementById("items").appendChild(node);
 
 
 var taskCounter=0;
-var deleteCounter=0;
+var doneCounter=0;
 var tasksList = items1.children;
-var userTask;
+var doneList = items2.children;
+var userTask; //this holds a string of name of tasks
+var userNum=0;
+var userDelete=0;
 var b;
 
 console.log(taskCounter);
@@ -59,14 +62,51 @@ document.getElementById("finishedButton").addEventListener("click", finishedFunc
 
 function finishedFunction(e){
   e.preventDefault();   //we need this so page soes not refresh. forms request url yada yada
-  userTask= prompt("WHich task is finished? 1-4");
+  userNum= prompt("WHich task is finished? 0-7");
   //console.log(items1.children);
-  console.log(tasks);
-  tasks[counter].textContent = userTask;
+  // console.log(tasksList);
+  doneList[doneCounter].textContent = tasksList[userNum].textContent;
    // var newNode= tasks[counter]
    // document.getElementById("items1").appendChild(newNode);
-   counter=counter-1;
+   tasksList[userNum].textContent= "moved to Done List";
+   taskCounter=taskCounter-1;
+   doneCounter= doneCounter+1;
 };
+
+document.getElementById("deleteButton").addEventListener("click", deleteFunction);
+
+function deleteFunction(e){
+  e.preventDefault();   //we need this so page soes not refresh. forms request url yada yada
+  userDelete= prompt("WHich item to permanently delete? 0-7");
+  //console.log(items1.children);
+  // console.log(tasksList);
+  doneList[userDelete].textContent = "Deleted!!!";
+   // var newNode= tasks[counter]
+   // document.getElementById("items1").appendChild(newNode);
+   // tasksList[userNum].textContent= "moved to Done List";
+   // taskCounter=taskCounter-1;
+   // doneCounter= doneCounter+1;
+};
+
+
+var node = document.createElement("li");
+node.className += "list-group-item";
+var textnode = document.createTextNode("water");
+node.appendChild(textnode);
+document.getElementById("items1").appendChild(node);
+
+
+node = document.createElement("li");
+node.className += "list-group-item";
+textnode = document.createTextNode("firefdg");
+node.appendChild(textnode);
+document.getElementById("items1").appendChild(node);
+
+// Removes an element from the document
+var element = document.getElementById("done");
+element.parentNode.removeChild(element)
+
+
 
 
 
