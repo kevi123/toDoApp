@@ -44,17 +44,19 @@ var userDelete=0;
 var b;
 
 console.log(taskCounter);
-document.getElementById("myButton").addEventListener("click", myFunction);
+document.getElementById("myButton").addEventListener("click", myFunction); //we find the only instance of myButton, when clicked activate function
 console.log("passedEvent");
 
 function myFunction(e){
   e.preventDefault();   //we need this so page soes not refresh. forms request url yada yada
   userTask= prompt("Hello please add item to do list");
-  //console.log(items1.children);
+  var node = document.createElement("li"); //creates <li></li>
+  node.className += "list-group-item"; //<li class="list-group-item"></li>
+  var textnode = document.createTextNode(userTask);
+  node.appendChild(textnode);   //<li>"text"</li>
+  document.getElementById("items1").appendChild(node);//<ul><li>text</li></ul>
   console.log(tasksList);
-  tasksList[taskCounter].textContent = userTask;
-   // var newNode= tasks[counter]
-   // document.getElementById("items1").appendChild(newNode);
+
    taskCounter=taskCounter+1;
 };
 
@@ -103,12 +105,13 @@ node.appendChild(textnode);
 document.getElementById("items1").appendChild(node);
 
 // Removes an element from the document
-var element = document.getElementById("done");
-element.parentNode.removeChild(element)
+var element = document.querySelectorAll(".done")[0];
+console.log(element)
+element.parentNode.removeChild(element);
 
 
-
-
+var test = document.querySelectorAll(".list-group-item")[0];
+console.log(test)
 
 
 // headerTitle.textContent= "Hello";
